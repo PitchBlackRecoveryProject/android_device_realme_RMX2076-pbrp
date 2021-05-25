@@ -173,3 +173,8 @@ TARGET_USES_LOGD := true
 TW_NO_USB_STORAGE := true
 PLATFORM_VERSION := 16.1.0
 #TW_OVERRIDE_SYSTEM_PROPS := "ro.build.version.security_patch;ro.vendor.build.security_patch;ro.build.version.release"
+
+# PBRP specific build flags
+PB_DISABLE_DEFAULT_DM_VERITY := true
+PB_DISABLE_DEFAULT_TREBLE_COMP := true
+PB_TORCH_PATH := "/sys/class/leds/led:torch_0"
