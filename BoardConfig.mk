@@ -117,8 +117,8 @@ TARGET_NO_RECOVERY := false
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
 # Partitions (listed in the file) to be wiped under recovery.
-TARGET_RECOVERY_WIPE := $(LOCAL_PATH)/recovery.wipe
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery.fstab
+#TARGET_RECOVERY_WIPE := $(LOCAL_PATH)/recovery.wipe
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/root/etc/recovery.fstab
 
 # Workaround for error copying vendor files to recovery ramdisk
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -152,21 +152,6 @@ TW_USE_TOOLBOX := true
 
 # Use mke2fs to create ext4 images
 TARGET_USES_MKE2FS := true
-
-# A/B updater updatable partitions list. Keep in sync with the partition list
-# with "_a" and "_b" variants in the device. Note that the vendor can add more
-# more partitions to this list for the bootloader and radio.
-AB_OTA_PARTITIONS += \
-    boot \
-    system \
-    vendor \
-    vbmeta \
-    dtbo
-
-# tell update_engine to not change dynamic partition table during updates
-# needed since our qti_dynamic_partitions does not include
-# vendor and odm and we also dont want to AB update them
-TARGET_ENFORCE_AB_OTA_PARTITION_LIST := true
 
 # Encryption
 PLATFORM_SECURITY_PATCH := 2099-12-31
