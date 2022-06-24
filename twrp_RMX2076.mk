@@ -25,11 +25,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # Inherit some common Omni stuff.
-$(call inherit-product, vendor/pb/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := RMX2076
-PRODUCT_NAME := omni_RMX2076
+PRODUCT_NAME := twrp_RMX2076
 PRODUCT_BRAND := Realme
 PRODUCT_MODEL := X50 Pro
 PRODUCT_MANUFACTURER := Realme
