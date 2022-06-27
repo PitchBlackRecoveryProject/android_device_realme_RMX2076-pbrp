@@ -1,3 +1,8 @@
+# Props to support stock OTA
+ro.commonsoft.ota=RMX2076L1
+ro.product.product.device=RMX2076L1
+ro.separate.soft=19706
+
 sys.usb.controller=a600000.dwc3
 sys.usb.rndis.func.name=rndis_bam
 sys.usb.rmnet.func.name=rmnet_bam
